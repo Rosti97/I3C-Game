@@ -1,31 +1,149 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/assets/css/laborone.css">
-    <title>I3C - Labor Team 1</title>
+  <link rel="stylesheet" href="/assets/css/laborone.css">
+  <title>I3C - Labor Team 1</title>
 </head>
+
 <body>
-    
+
+
+  <div class="test">Labor</div>
+
+  <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open
+    modal 1</button>
+  <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Open
+    modal 1</button>
+  <button id="btn-three" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa3">Open
+    modal 3</button>
 
 
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document"> 
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Bildschirm</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          AUG GAA GAG ACU AUG GAG GCU ACA UCC GAA GUA GAG AAC CCC AUG
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade " id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document"> <!---->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Nebenraum Tür</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger fade show" role="alert">
+          <strong>FALSCHER CODE!</strong> Zugang verwehrt.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>KORREKTER CODE!</strong> Zugang gewährt.
+        </div>
+        <form id="code-form">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Code:</label>
+            <input type="password" class="form-control" id="code">
+          </div>
+          </form>
+      </div>
+      <div id="code-suc">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Aminoacids_table.svg/1024px-Aminoacids_table.svg.png" style="width: 100%; height: auto; max-width: 100%;"> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+        <button type="button" class="btn btn-primary">Eingabe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModa3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document"> <!---->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img src="https://images.pexels.com/photos/5403574/pexels-photo-5403574.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="height: 150px;">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Send message</button>
+    </div>
+  </div>
+</div>
+</div>
 
 
-    <!-- Optional JavaScript -->
+  
+  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+<script>
+  const firebase = require("firebase");;
+  require("firebase/firestore");
+  
+  firebase.initializeApp({
+    apiKey: "AIzaSyCoQDrNojQu2Rql-0OmTy9f6tqs06VwqdM",
+    authDomain: "escapei3c.firebaseapp.com",
+    projectId: "escapei3c"
+  });
+
+  var db = firebase.firestore();
+
+  var docRef = db.collection("codes").doc("lab-one");
+
+  docRef.get().then(function(doc) {
+    if(doc.exists) {
+      console.log("Data-Test: ", doc.data());
+    } else {
+      console.log("Nopes");
+    }
+  }).catch(function(error) {
+    console.log("Error: ", error);
+  })
+  </script>
+
 </body>
+
 </html>
