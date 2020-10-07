@@ -4,5 +4,26 @@ html, body {
   }
 
 .test {
-  color: blue;
+  color: red;
+}
+
+.container-fluid {
+  position: relative;
+  height: 80vh;
+}
+
+#btn-one {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 60%;
+  right: 50%;
+}
+
+#btn-two {
+  width: 200px;
+  height: 232px;
+  position: absolute;
+  top: 10%;
+  right: 40%;
 }

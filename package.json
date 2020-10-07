@@ -1,0 +1,22 @@
+{
+  "name": "i3c-game",
+  "version": "1.0.0",
+  "description": "I3C-Projekt-Game",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rosti97/I3C-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rosti97/I3C-Game/issues"
+  },
+  "homepage": "https://github.com/Rosti97/I3C-Game#readme",
+  "dependencies": {
+    "firebase": "^7.22.1"
+  }
+}
