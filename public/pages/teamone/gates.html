@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/css/gatesone.css">
+    <title>I3C - Gates Team 1</title>
+</head>
+
+<body>
+    <div class="container-fluid buttons">
+        <div class="btn-one">
+            <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#hud">HUD</button>
+        </div>
+        <div class="btn-two">
+            <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#room">Tür</button>
+        </div>
+        <div class="btn-gates">
+            <button id="btn-gates" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#gates">Gates</button>
+        </div>
+        <div class="background">
+
+        </div>
+
+    </div>
+
+    <!-- <button id="btn-three" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa3">Open
+    modal 3</button> -->
+
+
+
+    <div class="modal fade" id="hud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">HUD</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="hudBefore">
+                        <strong>Verbindug wird hergestellt....</strong>
+                        V9A1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade " id="room" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="exampleModalLabel">Nebenraum Tür</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="alertCorrect" class="alert alert-success alert-dismissible fade" role="alert">
+                        <strong>KORREKTER CODE!</strong> Zugang gewährt.
+                    </div>
+
+                    <div id="formRoom" class="form-group">
+                        <label for="recipient-name" class="col-form-label">Code 1:</label>
+                        <div id="alertRoomWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
+                                CODE!</strong>
+                            Zugang verwehrt.</div>
+                        <input type="text" class="form-control" id="codeRoomInput" maxlength="4" required>
+                    </div>
+
+                    <div id="code-suc" class="d-none">
+                        <img src="https://images.pexels.com/photos/3261020/pexels-photo-3261020.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            style="width: 100%; height: auto; max-width: 100%;">
+                        <div class="dropdown">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hinweis von Gates:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Das habe ich im <strong>Schlaf</strong> gelöst!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-outline.dark dropdown-toggle d-inline " type="button"
+                                id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Wichtige Info:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Vergesst diesen Code nicht! Die Situation ist schon wie eine Schlüsselszene...
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="formNext" class="form-group">
+                            <label for="recipient-name" class="col-form-label">Code:</label>
+                            <div id="alertBatWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
+                                    CODE!</strong>
+                                Zugang verwehrt.</div>
+                            <input type="text" class="form-control" id="codeNextInput" maxlength="6" required>
+                        </div>
+
+                    </div>
+
+                    <div id="batAfter" class="d-none">
+                        <a href="#">Ein Notfall im Krankenhaus! Beeilt euch!</a>
+                    </div>
+
+                </div>
+
+                <div id="footerModalRoom" class="modal-footer">
+                    <button id="codeRoomEingabe" type="button" class="btn btn-primary">Eingabe</button>
+                    <button id="codeNextEingabe" type="button" class="btn btn-primary d-none">Eingabe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gates" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit Gates</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Uff, ja Überraschung, ich bin jetzt eine Frau. Man sollte Impfstoffe eben nicht überhastet einsetzen. Hach. Jedenfalls forschen wir weiter.
+          Wird richtig nice! Blabla. Ein Stück Schokolade? In der Zeit, in der ich mich mit euch unterhalte, habe ich 2 Milliarden $ verdient. Ich bin einfach reich.
+          Schön. Guck dich um, oder nicht. Mach was du willst. Ich kann dir eh nichts befehlen.
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+    <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
+
+    <script>
+
+        document.getElementById("codeRoomEingabe").onClick = checkRoomCode();
+        document.getElementById("codeRoomInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                checkRoomCode();
+            }});
+
+            function checkRoomCode() {
+                if (isCorrectRoom()) {
+                    document.querySelector("#formRoom").classList.add("d-none")
+
+                    console.log("Room Code Correct")
+                    document.getElementById("alertCorrect").classList.add("show");
+                    document.getElementById("code-suc").classList.remove("d-none");
+                } else {
+                    console.log("nopes");
+                    document.getElementById("alertRoomWrong").classList.remove("d-none");
+                    setTimeout(function () {
+                    document.getElementById("alertRoomWrong").classList.add("d-none");
+                }, 1100);
+            }
+
+            function isCorrectRoom() {
+                return document.getElementById("codeRoomInput").value === "AV19";
+            }
+        }
+
+        document.getElementById("codeNextEingabe").onClick = checkNextCode();
+        document.getElementById("codeNextInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                checkNextCode();
+            }
+        });
+
+        function checkNextCode() {
+            if (isNextCorrect()) {
+                document.querySelector("#formNext").classList.add("d-none");
+
+                console.log("Next correct");
+                document.getElementById("alertCorrect").classList.add("d-none");
+                document.getElementById("code-suc").classList.add("d-none");
+                document.getElementById("batAfter").classList.remove("d-none");
+                document.getElementById("footerModalRoom").classList.add("d-none");
+            } else {
+                console.log("next nope");
+                document.getElementById("alertBatWrong").classList.remove("d-none");
+                    setTimeout(function () {
+                    document.getElementById("alertBatWrong").classList.add("d-none");
+                }, 1100);
+            }
+        }
+
+        function isNextCorrect() {
+            return document.getElementById("codeNextInput").value === "819981"
+        }
+
+    </script>
+
+</body>
+
+</html>

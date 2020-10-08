@@ -1,0 +1,49 @@
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .background {
+      background-image: url("https://images.pexels.com/photos/3861463/pexels-photo-3861463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      height: 100%;
+      background-position: center;
+      background-repeat: none;
+      background-size: cover;
+  }
+
+.test {
+  color: red;
+}
+
+.container-fluid {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#btn-one {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  opacity: 0.1;
+}
+
+#btn-two {
+  width: 200px;
+  height: 600px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+#btn-gates {
+    width: 350px;
+    height: 700px;
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    opacity: 0.1;
+}
