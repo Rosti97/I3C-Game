@@ -1,0 +1,47 @@
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .background {
+    background-image: url("https://images.pexels.com/photos/3769151/pexels-photo-3769151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;
+    height: 100%;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+  
+.test {
+  color: red;
+}
+
+.container-fluid {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#btn-one {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 60%;
+  right: 50%;
+}
+
+#btn-locker {
+  width: 200px;
+  height: 432px;
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+}
+
+#btn-typ {
+  width: 200px;
+  height: 232px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
