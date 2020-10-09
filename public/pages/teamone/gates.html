@@ -133,23 +133,28 @@
     </div>
 
     <div class="modal fade" id="gates" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit Gates</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit Gates</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Uff, ja Überraschung, ich bin jetzt eine Frau. Man sollte Impfstoffe eben nicht überhastet
+                    einsetzen. Hach. Jedenfalls forschen wir weiter.
+                    Wird richtig nice! Blabla. Ein Stück Schokolade? In der Zeit, in der ich mich mit euch unterhalte,
+                    habe ich 2 Milliarden $ verdient. Ich bin einfach reich.
+                    Schön. Guck dich um, oder nicht. Mach was du willst. Ich kann dir eh nichts befehlen.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Alles Klar!</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          Uff, ja Überraschung, ich bin jetzt eine Frau. Man sollte Impfstoffe eben nicht überhastet einsetzen. Hach. Jedenfalls forschen wir weiter.
-          Wird richtig nice! Blabla. Ein Stück Schokolade? In der Zeit, in der ich mich mit euch unterhalte, habe ich 2 Milliarden $ verdient. Ich bin einfach reich.
-          Schön. Guck dich um, oder nicht. Mach was du willst. Ich kann dir eh nichts befehlen.
-        </div>
-      </div>
     </div>
-  </div> 
 
 
 
@@ -174,19 +179,22 @@
         document.getElementById("codeRoomInput").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
                 checkRoomCode();
-            }});
+            }
+        });
 
-            function checkRoomCode() {
-                if (isCorrectRoom()) {
-                    document.querySelector("#formRoom").classList.add("d-none")
+        function checkRoomCode() {
+            if (isCorrectRoom()) {
+                document.querySelector("#formRoom").classList.add("d-none")
 
-                    console.log("Room Code Correct")
-                    document.getElementById("alertCorrect").classList.add("show");
-                    document.getElementById("code-suc").classList.remove("d-none");
-                } else {
-                    console.log("nopes");
-                    document.getElementById("alertRoomWrong").classList.remove("d-none");
-                    setTimeout(function () {
+                console.log("Room Code Correct")
+                document.getElementById("alertCorrect").classList.add("show");
+                document.getElementById("code-suc").classList.remove("d-none");
+                document.getElementById("codeRoomEingabe").classList.add("d-none");
+                document.getElementById("codeNextEingabe").classList.remove("d-none");
+            } else {
+                console.log("nopes");
+                document.getElementById("alertRoomWrong").classList.remove("d-none");
+                setTimeout(function () {
                     document.getElementById("alertRoomWrong").classList.add("d-none");
                 }, 1100);
             }
@@ -196,14 +204,16 @@
             }
         }
 
-        document.getElementById("codeNextEingabe").onClick = checkNextCode();
-        document.getElementById("codeNextInput").addEventListener("keypress", function(e) {
+
+        document.getElementById("codeNextEingabe").addEventListener("click", checkNextCode);
+        document.getElementById("codeNextInput").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
                 checkNextCode();
             }
         });
 
         function checkNextCode() {
+            console.log("nextCode");
             if (isNextCorrect()) {
                 document.querySelector("#formNext").classList.add("d-none");
 
@@ -215,7 +225,7 @@
             } else {
                 console.log("next nope");
                 document.getElementById("alertBatWrong").classList.remove("d-none");
-                    setTimeout(function () {
+                setTimeout(function () {
                     document.getElementById("alertBatWrong").classList.add("d-none");
                 }, 1100);
             }
