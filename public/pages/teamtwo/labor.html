@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/css/labortwo.css">
+    <title>I3C - Labor Team 2</title>
+</head>
+
+<body>
+
+    <div class="container-fluid buttons">
+        <div class="btn-one">
+            <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal">Petrischalen</button>
+        </div>
+        <div class="btn-two">
+            <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModal2">Tür</button>
+        </div>
+        <div class="btn-typ">
+            <button id="btn-typ" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#blabla">Typ</button>
+        </div>
+        <div class="background">
+
+        </div>
+
+    </div>
+
+    <!-- <button id="btn-three" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa3">Open
+    modal 3</button> -->
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Hinweise</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="lead">
+                        Uns wurde gesagt, dass eine Kontaktperson Hinweise hinterlassen hat.
+                    </div>
+                    <div class="petri">
+                        <img src="https://images.pexels.com/photos/4031435/pexels-photo-4031435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="Petri" style="width:100%; max-width: 100%; height:auto;">
+                    </div>
+
+
+                    <div class="dropdown">
+                        <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hinweis gefällig?
+                        </button>
+                        <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                            <p>
+                                Du musst dich an die Lösung herantasten.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mainModalFooter" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade " id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <!---->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Nebenraum Hinweise</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="lead">
+                        Dieser Hinweis ist verschlüsselt... Vielleicht hängt es mit den Petrischalen zusammen.
+                    </div>
+                    <div id="picCake">
+                        <img src="/assets/img/bilderraetsel.png" style="width:100%; height: auto; max-width: 100%;">
+                        <div class="dropdown">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hinweis gefällig?
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Ein Bekannter Zauberer trägt zur Lösung bei.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="footerModalRoom" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="blabla" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title" id="typTitel">Ich glaube, wir brauchen deine Hilfe...</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="typBefore">
+                        <div class="lead">Eine Kontaktperson hat uns Hinweise hinterlassen.</div>
+                        <div>
+                            <p>Unsere Wisschenschaftler haben bereits einige Hinweise analysiert und auf die
+                                Petrischalen gebracht, kommen jedoch nicht weiter voran.</p>
+                            <p>Währenddessen haben unsere IT-Experten herausgefunden, dass etwas Wichtiges vor der
+                                Öffentlichkeit versteckt wird. Wir konnten
+                                den Ort noch nicht sicher herausfinden, er befindet sich jedoch in einer großen Stadt in
+                                Deutschland.
+                            </p>
+                            <p>Erst vor ein paar Minuten haben wir den nächsten Hinweis bekommen, er liegt im Nebenraum
+                                aus. Vielleicht haben alle Hinweise miteinander zu tun.
+                                Guck sie dir mal an!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="typCity d-none">
+                        <div class="lead">Du hast die Lösung?</div>
+                        <div id="formCity" class="form-group">
+                            <label for="recipient-name" class="col-form-label">In welche Stadt gehst du?</label>
+                            <div id="alertCityWrong" class="d-none" style="color:red; display: inline;">
+                                Da bist du auf der falschen Fährte...
+                            </div>
+                            <input type="text" class="form-control" id="cityInput">
+                        </div>
+                    </div>
+
+                    <div class="typBezirk d-none">
+                        <div id="formBezirk" class="form-group">
+                            <label for="recipient-name" class="col-form-label">Unsere IT-Experten wollen zuerst die
+                                Location prüfen. In welchen Stadtteil führt dich der Hinweis?</label>
+                            <div id="alertBezirkWrong" class="d-none" style="color:red; display: inline;">
+                                Unsere IT-Experten haben keine Auffälligkeiten dort entdeckt.
+                            </div>
+                            <input type="text" class="form-control" id="bezirkInput">
+                        </div>
+                    </div>
+
+                    <div class="typNext d-none">
+                        <div class="lead">
+                            Unsere IT-Experten bestätigen: Es gibt Auffälligkeiten bei der Location.
+                        </div>
+                        <p>Du solltest dir das näher ansehen!</p>
+                        <a href="/pages/teamtwo/attila.html">Los geht's!</a>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id="blaBtn" type="button" class="btn btn-primary">Ich hab die Lösung!</button>
+                    <button id="cityBtn" type="button" class="btn btn-primary d-none">Lösung weitergeben</button>
+                    <button id="bezirkBtn" type="button" class="btn btn-primary d-none">Lösung weitergeben</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
+    <script>
+        document.getElementById("blaBtn").onclick = function () {
+            document.querySelector(".typBefore").classList.add("d-none");
+            document.getElementById("blaBtn").classList.add("d-none");
+            document.querySelector(".typCity").classList.remove("d-none");
+            document.getElementById("cityBtn").classList.remove("d-none");
+        };
+
+        document.getElementById("cityInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                checkCityInput();
+            }
+        });
+
+        document.getElementById("cityBtn").addEventListener("click", checkCityInput);
+
+        function checkCityInput() {
+            if (document.getElementById("cityInput").value.toLowerCase() === "berlin") {
+                document.getElementById("cityBtn").classList.add("d-none");
+                document.getElementById("bezirkBtn").classList.remove("d-none");
+                document.querySelector(".typCity").classList.add("d-none");
+                document.querySelector(".typBezirk").classList.remove("d-none");
+            } else {
+                document.getElementById("alertCityWrong").classList.remove("d-none");
+                setTimeout(function () {
+                    document.getElementById("alertCityWrong").classList.add("d-none");
+                }, 2000);
+            }
+        }
+
+        document.getElementById("bezirkInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                console.log("bezirk check");
+                checkBezirkInput();
+            }
+        });
+
+        document.getElementById("bezirkBtn").addEventListener("click", checkBezirkInput);
+
+        function checkBezirkInput() {
+            if (document.getElementById("bezirkInput").value.toLowerCase() === "spandau") {
+                document.getElementById("bezirkBtn").classList.add("d-none");
+                document.querySelector(".typBezirk").classList.add("d-none");
+                document.querySelector(".typNext").classList.remove("d-none")
+                document.getElementById("typTitel").innerHTML = "Wow!";
+            } else {
+                document.getElementById("alertBezirkWrong").classList.remove("d-none");
+                setTimeout(function () {
+                    document.getElementById("alertBezirkWrong").classList.add("d-none");
+                }, 2000);
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
