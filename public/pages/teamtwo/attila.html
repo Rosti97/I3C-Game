@@ -21,6 +21,10 @@
             <button id="btn-attila" type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#attila">Attila</button>
         </div>
+        <div class="btn-statue">
+            <button id="btn-statue" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#statue">Statue</button>
+        </div>
         <div class="background">
 
         </div>
@@ -68,6 +72,49 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="dropdown firstCodeHinweis d-none">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hilfe für den ersten Code?
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Die IT-Experten im Labor fanden dazu folgenden Hinweis (nicht entschlüsselt):
+                                </p>
+                                <p>
+                                    Das Washington-Monument ist ein jrvßre Znezbeghez va Jnfuvatgba, Q.P., in Form eines
+                                    Boryvfxra.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown secondCodeHinweis d-none">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hilfe für den zweiten Code?
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Unsere Analysten haben folgendes herausgefunden:
+                                </p>
+                                <p>
+                                    Der Code hat etwas mit Gemüse zu tun.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown thirdCodeHinweis d-none">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hilfe für den dritten Code?
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Unsere Historiker sind sich einig:
+                                </p>
+                                <p>
+                                    Er war der Bruder des Hunnenkönigs.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -93,6 +140,9 @@
                         </div>
                     </div>
 
+                    <div class="notesNext d-none lead">
+                        <p>Die Laser sind aus! Freie Bahn!</p>
+                    </div>
 
                 </div>
                 <div id="footerModalRoom" class="modal-footer">
@@ -100,6 +150,8 @@
                     <button id="firstBtn" type="button" class="btn btn-primary d-none">Weiter</button>
                     <button id="secondBtn" type="button" class="btn btn-primary d-none">Weiter</button>
                     <button id="thirdBtn" type="button" class="btn btn-primary d-none">Weiter</button>
+                    <button id="nextBtn" type="button" class="btn btn-secondary d-none" data-dismiss="modal">Alles
+                        Klar!</button>
                 </div>
             </div>
         </div>
@@ -126,6 +178,61 @@
         </div>
     </div>
 
+    <div class="modal fade" id="statue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Statue</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="statueBefore">
+                        <div class="lead">
+                            Solange die Laser noch an sind, ist der Weg nicht frei!
+                        </div>
+                    </div>
+                    <div class="statueAfter d-none">
+                        <div class="lead">
+                            Oh so glänzend schön... Er ist zu mir gekommen... mein Eigen, mein Liebes... mein Eigen...
+                            <strong>mein Schaaatz!</strong>
+                        </div>
+                        <div class="keyImg">
+                            <img src="https://images.pexels.com/photos/115642/pexels-photo-115642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Schlüssel"
+                            style="width:100%; max-width: 100%; height: auto;">
+                        </div>
+                        <div class="lead">Den Schlüssel brauch ich Schwarz auf Weiß!</div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Wichtiger Hinweis
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Abpausen oder Abfotografieren!
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="nextLevel d-none">
+                        <div class="lead">
+                            Schnell! Ein Notfall im Krankenhaus!
+                        </div>
+                        <a href="#">Zum nächsten Level!</a>
+                    </div>
+                    <div id="footerModalStatue" class="modal-footer">
+                        <button id="doneBtn" type="button" class="btn btn-primary d-none">Aufgenommen und abgepaust!</button>
+                        <button id="statueBtn" type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Optional JavaScript -->
@@ -144,7 +251,8 @@
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
     <script>
-
+        setBg('/assets/img/attilla.jpeg');
+        var firstTry = 0, secondTry = 0; thirdTry = 0;
 
         document.getElementById("generatorBtn").addEventListener("click", function () {
             document.querySelector(".notes").classList.add("d-none");
@@ -174,29 +282,43 @@
                 document.querySelector(".notesFirst").classList.add("d-none");
                 document.getElementById("firstBtn").classList.add("d-none");
                 document.getElementById("alertWrong").classList.remove("d-none");
+                if (firstTry >= 2) {
+                    document.querySelector(".firstCodeHinweis").classList.remove("d-none");
+                } else {
+                    firstTry += 1;
+                    console.log("first: " + firstTry);
+                }
             }
         }
 
         document.getElementById("secondInput").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
+                console.log("Weiter 2 gedrückt");
                 checkSecondCode();
             }
         });
 
-        document.getElementById("secondBtn").addEventListener("click", checkFirstCode);
+        document.getElementById("secondBtn").addEventListener("click", checkSecondCode);
 
         function checkSecondCode() {
-            if (document.getElementById("secondInput").value.toLowerCase() === "karotte") {
+            if (document.getElementById("secondInput").value.toLowerCase() === "karotten") {
                 document.querySelector(".notesSecond").classList.add("d-none");
                 document.getElementById("secondBtn").classList.add("d-none");
                 document.querySelector(".notesThird").classList.remove("d-none");
                 document.getElementById("thirdBtn").classList.remove("d-none");
             } else {
+                console.log("nopes")
                 document.querySelector(".notes").classList.remove("d-none");
                 document.getElementById("generatorBtn").classList.remove("d-none");
                 document.querySelector(".notesSecond").classList.add("d-none");
                 document.getElementById("secondBtn").classList.add("d-none");
                 document.getElementById("alertWrong").classList.remove("d-none");
+                if (secondTry >= 2) {
+                    document.querySelector(".secondCodeHinweis").classList.remove("d-none");
+                } else {
+                    secondTry += 1;
+                    console.log("first: " + secondTry);
+                }
             }
         }
 
@@ -206,7 +328,49 @@
             }
         });
 
-        document.getElementById("thirdBtn").addEventListener("click", checkThirdCode)
+        document.getElementById("thirdBtn").addEventListener("click", checkThirdCode);
+
+        function checkThirdCode() {
+            if (document.getElementById("thirdInput").value.toLowerCase() === "bleda") {
+                document.querySelector(".notesThird").classList.add("d-none");
+                document.getElementById("thirdBtn").classList.add("d-none");
+                document.querySelector(".notesNext").classList.remove("d-none");
+                document.getElementById("nextBtn").classList.remove("d-none");
+                setBg('https://images.pexels.com/photos/37079/milan-pegasus-gallery-statue.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+                document.querySelector(".statueBefore").classList.add("d-none");
+                document.querySelector(".statueAfter").classList.remove("d-none");
+                document.getElementById("doneBtn").classList.remove("d-none");
+
+            } else {
+                document.querySelector(".notes").classList.remove("d-none");
+                document.getElementById("generatorBtn").classList.remove("d-none");
+                document.querySelector(".notesThird").classList.add("d-none");
+                document.getElementById("thirdBtn").classList.add("d-none");
+                document.getElementById("alertWrong").classList.remove("d-none");
+                if (thirdTry >= 2) {
+                    document.querySelector(".thirdCodeHinweis").classList.remove("d-none");
+                } else {
+                    thirdTry += 1;
+                    console.log("first: " + thirdTry);
+                }
+            }
+
+        }
+
+        document.getElementById("doneBtn").addEventListener("click", function() {
+            document.querySelector(".statueAfter").classList.add("d-none");
+            document.querySelector(".nextLevel").classList.remove("d-none");
+            document.getElementById("footerModalStatue").classList.add("d-none");
+        });
+
+        function setBg(url) {
+            document.body.style.backgroundImage = "url(" + url + ")";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.height = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "none";
+            console.log("BG changed");
+        }
     </script>
 
 </body>
