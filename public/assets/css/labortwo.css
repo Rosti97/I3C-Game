@@ -4,7 +4,7 @@ html, body {
   }
 
   .background {
-      background-image: url("https://images.pexels.com/photos/4033019/pexels-photo-4033019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: url("/assets/img/LAB02.jpg");
       height: 100%;
       background-position: center;
       background-repeat: none;

@@ -4,7 +4,7 @@ html, body {
   }
 
   .background {
-    background-image: url("https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("/assets/img/LAB_01.jpg");
     height: 100%;
     background-position: center;
     background-repeat: none;
@@ -23,25 +23,58 @@ html, body {
 }
 
 #btn-one {
-  width: 300px;
-  height: 250px;
+  width: 35vw;
+  height: 40vh;
   position: absolute;
-  top: 60%;
-  right: 50%;
+  top: 35%;
+  left: 30%;
+  opacity: 0;
 }
 
 #btn-two {
-  width: 200px;
-  height: 232px;
+  width: 29vw;
+  height: 33vh;
   position: absolute;
-  top: 10%;
-  right: 40%;
+  top: 1%;
+  left: 10%;
+  opacity: 0;
 }
 
 #btn-three {
-  width: 200px;
-  height: 232px;
+  /* width: 20px;
+  height: 20px; */
+  color: aliceblue;
   position: absolute;
-  top: 20%;
-  left: 40%;
+  bottom: 5%;
+  /* left: auto; */
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  
+}
+
+#btn-chart {
+  width: 50vw;
+  height: 33vh;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 0;
+}
+
+#btn-mikro {
+  width: 20vw;
+  height: 48vh;
+  position: absolute;
+  top: 46%;
+  left: 0%;
+  opacity: 0;
+}
+
+#btn-deko {
+  width: 20vw;
+  height: 37vh;
+  position: absolute;
+  top: 55%;
+  right: 0%;
+  opacity: 0;
 }
