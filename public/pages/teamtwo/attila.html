@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="/assets/css/attilatwo.css">
     <title>I3C - Team 2</title>
@@ -17,9 +20,9 @@
             <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#generator">Tür</button>
         </div>
-        <div class="btn-attila">
-            <button id="btn-attila" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#attila">Attila</button>
+        <div class="btn-attila mx-1 px-1">
+            <button id="btn-attila" type="button" class="btn btn-primary" data-toggle="modal" data-target="#attila"
+                style='font-size: 48px'><i class="fas fa-info-circle"></i></button>
         </div>
         <div class="btn-statue">
             <button id="btn-statue" type="button" class="btn btn-primary" data-toggle="modal"
@@ -59,8 +62,8 @@
 
 
                     <div class="notes">
-                        <img src="/assets/img/HILDMANN_LOCK.jpg"
-                            alt="Notizen" style="width:100%; max-width: 100%; height: auto;">
+                        <img src="/assets/img/HILDMANN_LOCK.jpg" alt="Notizen"
+                            style="width:100%; max-width: 100%; height: auto;">
                         <div class="dropdown">
                             <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -159,7 +162,7 @@
 
     <div class="modal fade" id="attila" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit Attila</h4>
@@ -168,13 +171,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Willkommen in meiner wundervollen Geheimbasis. Wir haben geforscht und etwas gefunden. Einen
-                    Impfstoff, der nicht
-                    die RNA verändert. Aber das Serum ist zu gut versteckt. Niemand kann an den Schlüssel kommen!
-                    Muahhahahah.
-                    Und nicht vergessen... Hast du mich und Batman schon mal gleichzeitig gesehen?
+                    <p class="lead">Verdammt! Wie hast du es hierher geschafft?</p>
+                    <p>Ist auch egal... Denn was du wahrscheinlich suchst, ist unerreichbar!</p>
+                    <p>Mein Name ist Attila und ich bin der Meinung diese ganze Pandemie und vor allem diese dummen
+                        Regeln sind vollkommener Schwachsinn!</p>
+                    <p>Die Regierung will uns nur alle kontrollieren und uns unsere Freiheit nehmen! Ich weiß was dieses
+                        Corona ist... Ich zeigs dir:</p>
+                    <img src="/assets/img/ATTILA-COV.jpg" style="width:100%; max-width: 100%; height: auto;">
+                    <p>Corona ist das Werk des Teufels! Und die Regierung und alle Geheimdienste versuchen es zu
+                        verschleiern, aber ich lasse mich nicht täuschen!</p>
+                    <p>Niemand wird den Code schnappen! Nur ich weiß wie man die Sicherungen überwindet! Niemand darf
+                        und niemand wird es schaffen!</p>
+                </div>
+                <div id="footerModalStatue" class="modal-footer">
+                    <button id="statueBtn" type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -200,8 +213,8 @@
                             <strong>mein Schaaatz!</strong>
                         </div>
                         <div class="keyImg">
-                            <img src="https://images.pexels.com/photos/115642/pexels-photo-115642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Schlüssel"
-                            style="width:100%; max-width: 100%; height: auto;">
+                            <img src="https://images.pexels.com/photos/115642/pexels-photo-115642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Schlüssel" style="width:100%; max-width: 100%; height: auto;">
                         </div>
                         <div class="lead">Den Schlüssel brauch ich Schwarz auf Weiß!</div>
                         <div class="dropdown">
@@ -225,8 +238,10 @@
                         <a href="/pages/finale.html">Zum nächsten Level!</a>
                     </div>
                     <div id="footerModalStatue" class="modal-footer">
-                        <button id="doneBtn" type="button" class="btn btn-primary d-none">Aufgenommen und abgepaust!</button>
-                        <button id="statueBtn" type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                        <button id="doneBtn" type="button" class="btn btn-primary d-none">Aufgenommen und
+                            abgepaust!</button>
+                        <button id="statueBtn" type="button" class="btn btn-secondary"
+                            data-dismiss="modal">Zurück</button>
                     </div>
                 </div>
             </div>
@@ -251,7 +266,7 @@
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
     <script>
-        setBg('/assets/img/HILDMANN.jpeg');
+        setBg('/assets/img/HILDMANN.jpg');
         var firstTry = 0, secondTry = 0; thirdTry = 0;
 
         document.getElementById("generatorBtn").addEventListener("click", function () {
@@ -357,7 +372,7 @@
 
         }
 
-        document.getElementById("doneBtn").addEventListener("click", function() {
+        document.getElementById("doneBtn").addEventListener("click", function () {
             document.querySelector(".statueAfter").classList.add("d-none");
             document.querySelector(".nextLevel").classList.remove("d-none");
             document.getElementById("footerModalStatue").classList.add("d-none");

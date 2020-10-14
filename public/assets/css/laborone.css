@@ -78,3 +78,8 @@ html, body {
   right: 0%;
   opacity: 0;
 }
+
+.fas:hover {
+  font-size: 54px;
+  color: beige;
+}

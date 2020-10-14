@@ -23,27 +23,32 @@ html, body {
 }
 
 #btn-attila {
-  width: 300px;
-  height: 250px;
+  color: aliceblue;
   position: absolute;
-  top: 50%;
-  right: 10%;
-  opacity: 0.1;
+  bottom: 5%;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
 }
 
 #btn-two {
-  width: 200px;
-  height: 600px;
+  width: 8vw;
+  height: 16vh;
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 42%;
+  left: 0%;
+  opacity: 0;
 }
 
 #btn-statue {
-    width: 280px;
-    height: 700px;
+    width: 20vw;
+    height: 75vh;
     position: absolute;
-    top: 10%;
-    left: 43%;
-    opacity: 0.1;
+    top: 9%;
+    left: 41%;
+    opacity: 0;
+}
+
+.fas:hover {
+  font-size: 54px;
+  color: beige;
 }

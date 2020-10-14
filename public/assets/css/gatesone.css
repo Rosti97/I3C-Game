@@ -48,3 +48,8 @@ html, body {
     right: 5%;
     opacity: 0;
 }
+
+.fas:hover {
+  font-size: 54px;
+  color: beige;
+}
