@@ -108,70 +108,51 @@
                 <div class="modal-body">
                     <div id="lockerBefore">
                         <img src="/assets/img/SERUM_SCHLOSS.jpg" style="width:100%; max-width: 100%; height: auto;">
-                        <div id="alertCorrect" class="alert alert-success alert-dismissible fade show d-none"
-                            role="alert">
-                            <strong>KORREKTER CODE!</strong> Zugang gewährt.
-                        </div>
-                        <div id="radioForm">
-                            <div class="lead d-none" id="wrongKey" style="color:red; display: inline;">Der Schlüsel
-                                passt nicht...</div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                    value="option1">
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Schlüssel 1
-                                    <img src="/assets/img/SCHLUSSEL-1.jpg"
-                                        style="display: inline; width:50%; max-width: 50%; height: auto;">
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                    value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Schlüssel 2
-                                    <img src="/assets/img/SCHLUSSEL-2.jpg"
-                                        style="width:50%; max-width: 50%; height: auto;">
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                                    value="option3">
-                                <label class="form-check-label" for="exampleRadios3">
-                                    Schlüssel 3
-                                    <img src="/assets/img/SCHLUSSEL-3.jpg"
-                                        style="width:50%; max-width: 50%; height: auto;">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="d-none" id="keyCorrect">
-                            <p class="lead" style="color:green; display: inline;">Richtiger Schlüssel</p>
-                        </div>
-                        <div class="d-none" id="codeCorrect">
-                            <p class="lead" style="color:green; display: inline;">Richtiger Code</p>
-                        </div>
-
-                        <div id="lockerCode" class="">
-                            <div id="codeForm" class="form-group">
-                                <label for="recipient-name" class="col-form-label">Code:</label>
-                                <div id="alertCodeWrong" class="d-none" style="color:red; display: inline;">
-                                    <strong>FALSCHER
-                                        CODE!</strong></div>
-                                <input type="text" class="form-control" id="codeInput">
-                            </div>
-                        </div>
                     </div>
 
-                    <div id="lockerAfter" class="d-none">
+                    <div id="lockerAfter" class="">
                         <div id="formRoom" class="form-group">
-                            <img src="/assets/img/KH-WOCHENTAG.jpg" style="width:100%; max-width: 100%; height: auto;">
                             <label for="recipient-name" class="col-form-label">Code: Wochentag?</label>
                             <div id="alertWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
                                     CODE!</strong>
                                 Zugang verwehrt.</div>
                             <input type="text" class="form-control" id="codeDayInput">
                         </div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hinweis gefällig?
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Es braucht Teamwork! Schlüssel und Code sind beide wichtig! Guck dir das Schloss und den dazugehörigen Code genau an!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown d-none" id="hinweis2">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Neuer Hinweis:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Wenn der Bolzen unten ist, entfällt die Ziffer an der Stelle.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown d-none" id="hinweis3">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ultmativer Hinweis:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Die übrig gebliebenen Stellen ergeben ein Datum.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="lockerCorrect d-none">
+                    <div id="lockerCorrect" class=" d-none">
                         <p class="lead">Geschafft!</p>
                         <p>Ihr habt Teamgeist bewiesen und habt dem Patienten das Serum verabreicht.</p>
                         <p>Wir werden den Patienten weiter beobachten und werden sehen, wie sich der Impfstoff auswirkt.
@@ -182,9 +163,9 @@
 
 
                 <div id="footerModalRoom" class="modal-footer">
-                    <button id="keyEingabe" type="button" class="btn btn-primary">Schloss knacken</button>
-                    <button id="codeKeyEingabe" type="button" class="btn btn-primary">Code eingeben</button>
-                    <button id="codeDayEingabe" type="button" class="btn btn-primary d-none">Eingabe</button>
+                    <!-- <button id="keyEingabe" type="button" class="btn btn-primary">Schloss knacken</button>
+                    <button id="codeKeyEingabe" type="button" class="btn btn-primary">Code eingeben</button> -->
+                    <button id="codeDayEingabe" type="button" class="btn btn-primary">Eingabe</button>
                 </div>
             </div>
         </div>
@@ -230,7 +211,7 @@
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
     <script>
-        var correctCodes = 0;
+        var tryCodes = 0;
 
         function setBg(url) {
             document.body.style.backgroundImage = "url(" + url + ")";
@@ -253,85 +234,35 @@
             document.getElementById("btn-light").classList.remove("d-none");
         });
 
-        document.getElementById("codeKeyEingabe").addEventListener("click", checkCorrectCode);
-        document.getElementById("codeInput").addEventListener("keypress", function (e) {
-            if (e.key === "Enter") {
-                checkCorrectCode();
-            }
-        });
-        document.getElementById("keyEingabe").addEventListener("click", checkCorrectKey);
-
-        function checkCorrectKey() {
-            if (document.getElementById("exampleRadios3").checked) {
-                console.log("correct Key");
-                document.getElementById("keyCorrect").classList.remove("d-none");
-                document.getElementById("keyEingabe").classList.add("d-none");
-                document.getElementById("radioForm").classList.add("d-none");
-
-                if (correctCodes == 1) {
-                    schlossDone();
-                } else {
-                    correctCodes += 1;
-                    console.log(correctCodes);
-                }
-
-            } else {
-                document.getElementById("wrongKey").classList.remove("d-none");
-                setTimeout(function () {
-                    document.getElementById("wrongKey").classList.add("d-none");
-                }, 1500);
-            }
-        }
-
-        function checkCorrectCode() {
-            if (document.getElementById("codeInput").value === "8199891") {
-                console.log("yep");
-                document.getElementById("codeCorrect").classList.remove("d-none");
-                document.getElementById("lockerCode").classList.add("d-none");
-                document.getElementById("codeKeyEingabe").classList.add("d-none");
-
-                if (correctCodes == 1) {
-                    schlossDone();
-                } else {
-                    correctCodes += 1;
-                    console.log(correctCodes);
-                }
-            } else {
-                document.getElementById("alertCodeWrong").classList.remove("d-none");
-                setTimeout(function () {
-                    document.getElementById("alertCodeWrong").classList.add("d-none");
-                }, 1500);
-            };
-        }
-
-        function schlossDone() {
-            document.getElementById("codeDayEingabe").classList.remove("d-none");
-            document.getElementById("lockerBefore").classList.add("d-none");
-            document.getElementById("lockerAfter").classList.remove("d-none");
-            document.getElementById("codeDayEingabe").classList.remove("d-none");
-        }
-
-        function keyFunction() {
-            document.getElementById("lockerAfter").classList.remove("d-none");
-            document.getElementById("codeKeyEingabe").classList.add("d-none");
-            document.getElementById("codeDayEingabe").classList.remove("d-none");
-        }
-
-        document.getElementById("codeDayInput").addEventListener("keydown", function (e) {
-            if (e.key = "Enter") {
-                checkDay();
+        document.getElementById("codeDayEingabe").addEventListener("click", checkCode);
+        document.getElementById("codeDayInput").addEventListener("keypress", function (e){
+            if(e.key === "Enter") {
+                checkCode();
             }
         });
 
-        document.getElementById("codeDayEingabe").addEventListener("click", checkDay);
-
-        function checkDay() {
-            if (document.getElementById("codeDayInput").value.toLowerCase() === "sonntag") {
+        function checkCode() {
+            if (document.getElementById("codeDayInput").value.toString().toLowerCase() === "sonntag") {
                 document.getElementById("lockerAfter").classList.add("d-none");
+                document.getElementById("lockerBefore").classList.add("d-none");
+                document.getElementById("lockerCorrect").classList.remove("d-none");
                 document.getElementById("codeDayEingabe").classList.add("d-none");
-                document.querySelector(".lockerCorrect").classList.remove("d-none");
+            } else {
+                if(tryCodes >= 1) {
+                    document.getElementById("hinweis2").classList.remove("d-none");
+                    tryCodes += 1;
+                } if (tryCodes >= 4) {
+                    document.getElementById("hinweis3").classList.remove("d-none");
+                }else {
+                    tryCodes += 1;
+                }
+                document.getElementById("alertWrong").classList.remove("d-none");
+                setTimeout(function () {
+                    document.getElementById("alertWrong").classList.add("d-none");
+                }, 2000);
             }
-        }
+        };
+        
     </script>
 
 </body>

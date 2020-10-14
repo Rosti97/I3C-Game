@@ -317,7 +317,8 @@
         document.getElementById("secondBtn").addEventListener("click", checkSecondCode);
 
         function checkSecondCode() {
-            if (document.getElementById("secondInput").value.toLowerCase() === "karotten") {
+            if (document.getElementById("secondInput").value.toLowerCase() === "karotten" ||
+            document.getElementById("secondInput").value.toLowerCase() === "karotte") {
                 document.querySelector(".notesSecond").classList.add("d-none");
                 document.getElementById("secondBtn").classList.add("d-none");
                 document.querySelector(".notesThird").classList.remove("d-none");

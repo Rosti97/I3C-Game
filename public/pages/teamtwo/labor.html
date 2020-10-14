@@ -388,7 +388,6 @@
 
         document.getElementById("bezirkInput").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
-                console.log("bezirk check");
                 checkBezirkInput();
             }
         });
@@ -396,7 +395,8 @@
         document.getElementById("bezirkBtn").addEventListener("click", checkBezirkInput);
 
         function checkBezirkInput() {
-            if (document.getElementById("bezirkInput").value.toLowerCase() === "spandau") {
+            if (document.getElementById("bezirkInput").value.toLowerCase() === "spandau" || 
+            document.getElementById("bezirkInput").value.toLowerCase() === "rathaus spandau") {
                 document.getElementById("bezirkBtn").classList.add("d-none");
                 document.querySelector(".typBezirk").classList.add("d-none");
                 document.querySelector(".typNext").classList.remove("d-none")
