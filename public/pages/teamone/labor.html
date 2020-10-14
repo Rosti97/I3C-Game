@@ -63,6 +63,17 @@
         <div class="modal-body">
           <div id="mainBefore">
             <img src="/assets/img/LAB_01_BILDSCHIRM.jpg" style="width:100%; height: auto; max-width: 100%;">
+            <div class="dropdown d-none" id="dropdownMain">
+              <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMainButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hinweis gefällig?
+              </button>
+              <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                <p>
+                  Jeweils 3 Buchstaben ergeben einen neuen Buchstaben für die Lösung!
+                </p>
+              </div>
+            </div>
             <div class="form-group">
               <label class="col-form-label">Code:</label>
               <div id="alertMainWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
@@ -72,7 +83,10 @@
             </div>
           </div>
           <div id="mainAfter" class="d-none">
-            <a href="gates.html">Weiter gehts</a>
+            <p class="lead">Das ergibt Sinn!</p-lead>
+            <p>"Triff mich um 19 Uhr"... hmm... aber wen?</p>
+            <p>Durch deine Hilfe, konnte man einen weiteren DNA-Strang entschlüsseln, es kam eine Koordinaten-Angabe heraus.</p>
+            <a href="gates.html">Den Hinweisen folgen!</a>
           </div>
         </div>
 
@@ -255,7 +269,7 @@
   <script src="/pages/teamone/labor.js" type="module"></script>
 
   <script>
-    var cakeTry = 0;
+    var cakeTry = 0, mainTry = 0;
 
     document.getElementById("raumCodeEingabe").onclick = checkCodeRoom;
     document.getElementById("codeRoomInput").addEventListener("keypress", function (e) {
@@ -336,6 +350,7 @@
         document.getElementById("codeMainInput").value.toLowerCase().includes("meetmeatsevenpm");
     }
 
+
     function checkMain() {
 
       if (isCorrectMain()) {
@@ -343,7 +358,15 @@
         document.getElementById("mainAfter").classList.remove("d-none");
         document.getElementById("mainModalFooter").classList.add("d-none");
       } else {
-        console.log("nopes");
+        if (mainTry >= 2) {
+          document.getElementById("dropdownMain").classList.remove("d-none");
+        } else {
+          mainTry += 1;
+        }
+        document.getElementById("alertMainWrong").classList.remove("d-none");
+        setTimeout(function () {
+          document.getElementById("alertMainWrong").classList.add("d-none");
+        }, 1500);
       }
     }
 

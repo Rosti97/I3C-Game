@@ -4,7 +4,7 @@ html, body {
   }
 
   .background {
-      background-image: url("https://images.pexels.com/photos/3861463/pexels-photo-3861463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: url("/assets/img/GATES_SCHWERER.jpg");
       height: 100%;
       background-position: center;
       background-repeat: none;
@@ -23,27 +23,28 @@ html, body {
 }
 
 #btn-one {
-  width: 300px;
-  height: 250px;
+  width: 63vw;
+  height: 66vh;
   position: absolute;
-  top: 50%;
-  right: 10%;
-  opacity: 0.1;
+  top: 7%;
+  left: 10%;
+  opacity: 0;
 }
 
 #btn-two {
-  width: 200px;
-  height: 600px;
+  color: aliceblue;
   position: absolute;
-  top: 10%;
-  left: 5%;
+  bottom: 5%;
+  /* left: auto; */
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
 }
 
 #btn-gates {
-    width: 350px;
-    height: 200px;
+    width: 18vw;
+    height: 44vh;
     position: absolute;
-    top: 25%;
-    left: 37%;
-    opacity: 0.1;
+    top: 33%;
+    right: 5%;
+    opacity: 0;
 }

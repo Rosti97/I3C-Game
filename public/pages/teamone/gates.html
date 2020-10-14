@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="/assets/css/gatesone.css">
     <title>I3C - Team 1</title>
@@ -17,9 +20,13 @@
             <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#hud">HUD</button>
         </div>
-        <div class="btn-two">
+        <!-- <div class="btn-two">
             <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#room">Tür</button>
+        </div> -->
+        <div class="text-center">
+            <button id="btn-two" type="button" class="btn-two btn btn-primary" data-toggle="modal" data-target="#room"
+                style='font-size: 48px'><i class="fa fa-info-circle"></i></button>
         </div>
         <div class="btn-gates">
             <button id="btn-gates" type="button" class="btn btn-primary" data-toggle="modal"
@@ -47,8 +54,49 @@
                 </div>
                 <div class="modal-body">
                     <div id="hudBefore">
-                        <strong>Verbindug wird hergestellt....</strong>
-                        V9A1
+                        <img src="/assets/img/GATES_HUD_SCHWER.jpg" style="width: 100%; height: auto; max-width: 100%;">
+                    </div>
+                    <div id="hudAfter" class="d-none">
+                        <img src="/assets/img/GATES_HUD.jpg" style="width: 100%; height: auto; max-width: 100%;">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownHinweisButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hinweis:
+                        </button>
+                        <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                            <p>
+                                Hmmm.. hat das etwas mit dem Code zu tun?
+                            </p>
+                            <p>
+                                Was haben die Zeichen und Buchstaben zu bedeuten?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="ddHinweis"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rätsel zu schwer?
+                        </button>
+                        <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                            <p>
+                                Die Buchstaben sind wichtig!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dropdown d-none" id="hinweis">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="ddHinweisTry"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Neuer Hinweis:
+                        </button>
+                        <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                            <p>
+                                Verbinde die Buchstaben zu 4 Zeichen! Jeweils beginnend mit "A"!
+                            </p>
+                            <p>
+                                Die Lösung besteht nicht nur aus Buchstaben... 
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,12 +109,31 @@
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <h4 class="modal-title" id="exampleModalLabel">Nebenraum Tür</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Das geheime Treffen</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div id="roomBefore">
+                        <p class="lead">Du bist dem Hinweis gefolgt und bist im geheimen Labor von Gates angekommen!</p>
+                        <p>Vielleicht findest du was raus, wenn du mit Gates sprichst!</p>
+                        <p>Hinter dir befindet sich eine Tür. Der Zugang ist versperrt. Den Raum solltest du dir aber
+                            ansehen! </p>
+                        <p>Neben der Tür befindet sich eine Code-Eingabe:</p>
+
+                        <div class="dropdown d-none" id="roomHinweis">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="ddHinweisTry"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Neuer Hinweis:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    2 Buchstaben, 2 Zahlen
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div id="alertCorrect" class="alert alert-success alert-dismissible fade" role="alert">
                         <strong>KORREKTER CODE!</strong> Zugang gewährt.
@@ -81,10 +148,10 @@
                     </div>
 
                     <div id="code-suc" class="d-none">
-                        <img src="/assets/img/GATES_NEBENRAUM.jpg"
-                            style="width: 100%; height: auto; max-width: 100%;">
+                        <img src="/assets/img/GATES_NEBENRAUM.jpg" style="width: 100%; height: auto; max-width: 100%;" id="batTisch">
+                        <img src="/assets/img/GATES_NEBENRAUM-BAT.jpg" style="width: 100%; height: auto; max-width: 100%;" id="bat" class="d-none">
                         <div class="dropdown">
-                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Hinweis von Gates:
                             </button>
@@ -96,7 +163,7 @@
                         </div>
 
                         <div class="dropdown">
-                            <button class="btn btn-outline.dark dropdown-toggle d-inline " type="button"
+                            <button class="btn btn-warning dropdown-toggle d-inline " type="button"
                                 id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Wichtige Info:
@@ -108,24 +175,43 @@
                             </div>
                         </div>
 
+                        <div class="dropdown d-none" id="sleepHinweis">
+                            <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Hinweis Code:
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                                <p>
+                                    Wie schläft eigentlich eine Fledermaus? Ergibt sich dadurch eine neue Sichtweise?
+                                </p>
+                            </div>
+                        </div>
+
                         <div id="formNext" class="form-group">
                             <label for="recipient-name" class="col-form-label">Code:</label>
                             <div id="alertBatWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
                                     CODE!</strong>
                                 Zugang verwehrt.</div>
-                            <input type="text" class="form-control" id="codeNextInput" maxlength="6" required>
+                            <input type="text" class="form-control" id="codeNextInput" maxlength="7" required>
                         </div>
 
                     </div>
 
-                    <div id="batAfter" class="d-none">
-                        <a href="/pages/finale.html">Ein Notfall im Krankenhaus! Beeilt euch!</a>
+                    <div id="batAfter" class="d-none text-center">
+                        <p class="lead"><strong>"8199891"</strong> - Das ist der Code!</p-lead>
+                        <p>Den sollte ich mir auf jeden Fall merken!</p>
+                        <p></p>
+                        <hr>
+                        <p class="lead">Ohje! Ein Notfall im Krankenhaus!</p>
+                        <a href="/pages/finale.html">Mach dich auf den Weg!</a>
                     </div>
 
                 </div>
 
                 <div id="footerModalRoom" class="modal-footer">
                     <button id="codeRoomEingabe" type="button" class="btn btn-primary">Eingabe</button>
+                    <button id="fledermaus" type="button" class="btn btn-primary">Fledermaus näher ansehen</button>
+                    <button id="fledermausBack" type="button" class="btn btn-secondary d-none">Tisch ansehen</button>
                     <button id="codeNextEingabe" type="button" class="btn btn-primary d-none">Eingabe</button>
                 </div>
             </div>
@@ -134,7 +220,7 @@
 
     <div class="modal fade" id="gates" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit Gates</h4>
@@ -143,11 +229,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Uff, ja Überraschung, ich bin jetzt eine Frau. Man sollte Impfstoffe eben nicht überhastet
-                    einsetzen. Hach. Jedenfalls forschen wir weiter.
-                    Wird richtig nice! Blabla. Ein Stück Schokolade? In der Zeit, in der ich mich mit euch unterhalte,
-                    habe ich 2 Milliarden $ verdient. Ich bin einfach reich.
-                    Schön. Guck dich um, oder nicht. Mach was du willst. Ich kann dir eh nichts befehlen.
+                    <p class="lead">Oh, jemand hat es geschafft die Hinweise zu entschlüsseln... Erstaunlich!</p>
+                    <p>Ich glaube du kennst mich bereits, ich bin Gates. Bill Gates.</p>
+                    <p>Leider werde ich momentan öffentlich angegriffen, ich hätte vor die Menschheit durch eine
+                        Zwangsimpfung zu chipen, um dann rund um die Uhr Daten empfangen zu können. Aber gut... Diese
+                        verrückten Ideen verbreiten sich irgendwie schneller in den sozialen Medien als die Wahrheit.
+                    </p>
+                    <p>Ich pflanze niemandem Mikrochips ein. Ich habe das Coronavirus nicht erschaffen.</p>
+                    <p>Ich versuche jedoch mein Bestes mit den mir möglichen Mitteln die Forschung voranzutreiben.</p>
+                    <p>Bereits nach der Ebola-Epidemie habe ich gewarnt, dass wir für die nächste Pandemie nicht
+                        gerüstet seien. Vielleicht rühren daher diese Theorien...</p>
+                    <p>Die Analyse des Virus ging sehr langsam, alleine schon um die Symptome zu verstehen. Auch wussten
+                        wir anfangs nicht wie wichtig Masken sein würden. Mittlerweile ist klar, dass das Tragen einer
+                        Maske - auch bei nicht infizierten Menschen - hilft, die Infektionsgefahr zu minimieren.</p>
+                    <p>Natürlich neben häufigen und richtigem Händewaschen und desinfizieren.</p>
+                    <p></p>
+                    <p>Jedenfalls, nachdem du schon die Hinweise entschlüsseln konntest, wirst du auch auf den Code
+                        kommen, um einen wichtigen Schlüssel zu erhalten.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Alles Klar!</button>
@@ -174,7 +272,7 @@
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
     <script>
-
+        var roomTry = 0, batTry = 0;
         document.getElementById("codeRoomEingabe").onClick = checkRoomCode();
         document.getElementById("codeRoomInput").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
@@ -185,14 +283,17 @@
         function checkRoomCode() {
             if (isCorrectRoom()) {
                 document.querySelector("#formRoom").classList.add("d-none")
-
-                console.log("Room Code Correct")
                 document.getElementById("alertCorrect").classList.add("show");
                 document.getElementById("code-suc").classList.remove("d-none");
                 document.getElementById("codeRoomEingabe").classList.add("d-none");
                 document.getElementById("codeNextEingabe").classList.remove("d-none");
+                document.getElementById("roomBefore").classList.add("d-none");
             } else {
-                console.log("nopes");
+                if (roomTry >= 3) {
+                    document.getElementById("roomHinweis").classList.remove("d-none");
+                } else {
+                    roomTry += 1;
+                }
                 document.getElementById("alertRoomWrong").classList.remove("d-none");
                 setTimeout(function () {
                     document.getElementById("alertRoomWrong").classList.add("d-none");
@@ -204,6 +305,24 @@
             }
         }
 
+        document.getElementById("ddHinweis").addEventListener("click", function() {
+            document.getElementById("hudBefore").classList.add("d-none");
+            document.getElementById("hudAfter").classList.remove("d-none");
+        });
+
+        document.getElementById("fledermaus").addEventListener("click", function() {
+            document.getElementById("fledermausBack").classList.remove("d-none");
+            document.getElementById("bat").classList.remove("d-none");
+            document.getElementById("batTisch").classList.add("d-none");
+            document.getElementById("fledermaus").classList.add("d-none");
+        });
+
+        document.getElementById("fledermausBack").addEventListener("click", function(){
+            document.getElementById("fledermausBack").classList.add("d-none");
+            document.getElementById("bat").classList.add("d-none");
+            document.getElementById("batTisch").classList.remove("d-none");
+            document.getElementById("fledermaus").classList.remove("d-none");
+        });
 
         document.getElementById("codeNextEingabe").addEventListener("click", checkNextCode);
         document.getElementById("codeNextInput").addEventListener("keypress", function (e) {
@@ -217,13 +336,16 @@
             if (isNextCorrect()) {
                 document.querySelector("#formNext").classList.add("d-none");
 
-                console.log("Next correct");
                 document.getElementById("alertCorrect").classList.add("d-none");
                 document.getElementById("code-suc").classList.add("d-none");
                 document.getElementById("batAfter").classList.remove("d-none");
                 document.getElementById("footerModalRoom").classList.add("d-none");
             } else {
-                console.log("next nope");
+                if (batTry >= 2) {
+                    document.getElementById("sleepHinweis").classList.remove("d-none");
+                } else {
+                    batTry +=1;
+                }
                 document.getElementById("alertBatWrong").classList.remove("d-none");
                 setTimeout(function () {
                     document.getElementById("alertBatWrong").classList.add("d-none");
@@ -232,7 +354,7 @@
         }
 
         function isNextCorrect() {
-            return document.getElementById("codeNextInput").value === "819981"
+            return document.getElementById("codeNextInput").value === "8199891"
         }
 
     </script>
