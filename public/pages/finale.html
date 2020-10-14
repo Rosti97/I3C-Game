@@ -6,24 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="/assets/css/finale.css">
-    <title>I3C - Gates Team 1</title>
+    <title>I3C - Krankenhaus</title>
 </head>
 
 <body>
     <div class="container-fluid buttons">
-        <!-- <div class="btn-one">
-            <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#hud">HUD</button>
-        </div> -->
+        <div class="btn-patient">
+            <button id="btn-patient" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#patient">Patient</button>
+        </div>
+
         <div class="btn-locker">
             <button id="btn-locker" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#locker">Schrank</button>
+                data-target="#locker">Code</button>
         </div>
-        <div class="btn-typ">
-            <button id="btn-typ" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#typ">Typ</button>
+
+        <div class="btn-icons mx-1 px-1">
+            <button id="btn-typ" type="button" class="btn btn-primary" data-toggle="modal" data-target="#typ"
+                style='font-size: 48px'><i class="fas fa-info-circle"></i></button>
+            <button id="btn-dark" type="button" class="btn btn-primary d-none" style='font-size: 48px'><i
+                    class="fas fa-lightbulb"></i></button>
+            <button id="btn-light" type="button" class="btn btn-primary" style='font-size: 48px'><i
+                    class="far fa-lightbulb"></i></i></button>
         </div>
         <div class="background">
 
@@ -36,24 +45,54 @@
 
 
 
-    <!-- <div class="modal fade" id="hud" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="patient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">HUD</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Patient im Reinraum</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div id="hudBefore">
-                        <strong>Verbindug wird hergestellt....</strong>
-                        V9A1
-                    </div>
+                    <div class="lead">Ein an Corona erkrankter Patient liegt im Krankenhausraum.</div>
+                    <hr>
+                    <p>Der Hauptübertragungsweg des Virus ist über Träpfcheninfektion/Aerosole. Der Patient liegt mit
+                        Husten und Fieber der Station. Schmecken und Riechen funktioniert
+                        auch nicht mehr. Alles typische Symptomen von SARS-CoV-2.</p>
+                        <hr>
+                    <p>Er ist einer der freiwilligen Versuchspersonen unserer Studie, das neue Serum zu testen.
+                        Eigentlich sollte der Impfstoff an einem gesunden Menschen getestet werden, aber sein Zustand
+                        ist nicht gerade prickelnd, weswegen er zugestimmt hat den Test jetzt durchzuführen.
+                    </p>
+                    <p>
+                        Ein Impfstoff darf erst auf den offiziellen Markt, nachdem er erfolgreich klinische Studien
+                        bestanden hat. In dieser Phase sind wir gerade. Davor wurde der Impfstoff bereits in
+                        Laborversuchen analysiert, um die Wirksamkeit zu gewährleisten. Der Weg dahin beinhaltet
+                        verschiedene Stationen:
+                    </p>
+                    <p>Analyse des Virus, Forschung an einem Impfstoff, Laborversuche (auch Tierversuche), klinische
+                        Studien, Großproduktion und Zulassungsverfahren. Danach darf sich die Bevölkerung impfen lassen.
+                    </p>
+                    <p>
+                        Es gibt in den klinischen Studien meistens 3 Phasen: die erste Phase wird mit 10-30 Personen
+                        durchgeführt, um die Verträglichkeit an sich zu prüfen. Phase 2 ist meistens eine Studie mit
+                        50-500 Personen, welches
+                        die Reaktion des menschlichen Immunsystems analysiert, um die Dosis zu optimieren. Phase 3 ist
+                        die größte Studie mit meist mehr als 10.000 Personen. Hier wird geprüft, wie zuverlässig der
+                        Impfstoff schützt.
+                    </p>
+                    <p>
+                        Es existieren über 190 Projekte, um einen geeigneten Impfstoff zu finden. Wir sind eines davon.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Verstanden</button>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="modal fade " id="locker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -61,20 +100,70 @@
             <div class="modal-content">
                 <div class="modal-header">
 
-                    <h4 class="modal-title" id="exampleModalLabel">Schrank</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Schrank mit Serum</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div id="lockerBefore">
+                        <img src="/assets/img/SERUM_SCHLOSS.jpg" style="width:100%; max-width: 100%; height: auto;">
+                        <div id="alertCorrect" class="alert alert-success alert-dismissible fade show d-none"
+                            role="alert">
+                            <strong>KORREKTER CODE!</strong> Zugang gewährt.
+                        </div>
+                        <div id="radioForm">
+                            <div class="lead d-none" id="wrongKey" style="color:red; display: inline;">Der Schlüsel
+                                passt nicht...</div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Schlüssel 1
+                                    <img src="/assets/img/SCHLUSSEL-1.jpg"
+                                        style="display: inline; width:50%; max-width: 50%; height: auto;">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Schlüssel 2
+                                    <img src="/assets/img/SCHLUSSEL-2.jpg"
+                                        style="width:50%; max-width: 50%; height: auto;">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Schlüssel 3
+                                    <img src="/assets/img/SCHLUSSEL-3.jpg"
+                                        style="width:50%; max-width: 50%; height: auto;">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-none" id="keyCorrect">
+                            <p class="lead" style="color:green; display: inline;">Richtiger Schlüssel</p>
+                        </div>
+                        <div class="d-none" id="codeCorrect">
+                            <p class="lead" style="color:green; display: inline;">Richtiger Code</p>
+                        </div>
 
-                    <div id="alertCorrect" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-                        <strong>KORREKTER CODE!</strong> Zugang gewährt.
+                        <div id="lockerCode" class="">
+                            <div id="codeForm" class="form-group">
+                                <label for="recipient-name" class="col-form-label">Code:</label>
+                                <div id="alertCodeWrong" class="d-none" style="color:red; display: inline;">
+                                    <strong>FALSCHER
+                                        CODE!</strong></div>
+                                <input type="text" class="form-control" id="codeInput">
+                            </div>
+                        </div>
                     </div>
-
 
                     <div id="lockerAfter" class="d-none">
                         <div id="formRoom" class="form-group">
+                            <img src="/assets/img/KH-WOCHENTAG.jpg" style="width:100%; max-width: 100%; height: auto;">
                             <label for="recipient-name" class="col-form-label">Code: Wochentag?</label>
                             <div id="alertWrong" class="d-none" style="color:red; display: inline;"><strong>FALSCHER
                                     CODE!</strong>
@@ -83,14 +172,18 @@
                         </div>
                     </div>
                     <div class="lockerCorrect d-none">
-                        <p>Yay, alle sind gesund</p>
+                        <p class="lead">Geschafft!</p>
+                        <p>Ihr habt Teamgeist bewiesen und habt dem Patienten das Serum verabreicht.</p>
+                        <p>Wir werden den Patienten weiter beobachten und werden sehen, wie sich der Impfstoff auswirkt.
+                            Hoffentlich kann er bald für alle verfügbar sein!</p>
                     </div>
                 </div>
 
 
 
                 <div id="footerModalRoom" class="modal-footer">
-                    <button id="codeKeyEingabe" type="button" class="btn btn-primary">Eingabe</button>
+                    <button id="keyEingabe" type="button" class="btn btn-primary">Schloss knacken</button>
+                    <button id="codeKeyEingabe" type="button" class="btn btn-primary">Code eingeben</button>
                     <button id="codeDayEingabe" type="button" class="btn btn-primary d-none">Eingabe</button>
                 </div>
             </div>
@@ -101,13 +194,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">Unterhaltung mit ???</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Im Krankenhaus</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Schnell! Das Serum! Es liegt im Schrank!
+                    <p class="lead">Ich sehe die zwei Teams haben es rechtzeitig geschafft. Ihr müsst jetzt
+                        <strong>kooperieren</strong>, um den
+                        letzen Code zu knacken!</p>
+                    <p>Das Serum liegt im Schrank. Wir müssen es verabreichen! Beeilt euch!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Alles Klar!</button>
@@ -134,8 +230,86 @@
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
     <script>
+        var correctCodes = 0;
 
-        document.getElementById("codeKeyEingabe").addEventListener("click", keyFunction);
+        function setBg(url) {
+            document.body.style.backgroundImage = "url(" + url + ")";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.height = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "none";;
+        }
+
+        setBg('/assets/img/KH2.jpg');
+
+        document.getElementById("btn-light").addEventListener("click", function () {
+            setBg('/assets/img/KH.jpg');
+            document.getElementById("btn-light").classList.add("d-none");
+            document.getElementById("btn-dark").classList.remove("d-none");
+        });
+        document.getElementById("btn-dark").addEventListener("click", function () {
+            setBg('/assets/img/KH2.jpg');
+            document.getElementById("btn-dark").classList.add("d-none");
+            document.getElementById("btn-light").classList.remove("d-none");
+        });
+
+        document.getElementById("codeKeyEingabe").addEventListener("click", checkCorrectCode);
+        document.getElementById("codeInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                checkCorrectCode();
+            }
+        });
+        document.getElementById("keyEingabe").addEventListener("click", checkCorrectKey);
+
+        function checkCorrectKey() {
+            if (document.getElementById("exampleRadios3").checked) {
+                console.log("correct Key");
+                document.getElementById("keyCorrect").classList.remove("d-none");
+                document.getElementById("keyEingabe").classList.add("d-none");
+                document.getElementById("radioForm").classList.add("d-none");
+
+                if (correctCodes == 1) {
+                    schlossDone();
+                } else {
+                    correctCodes += 1;
+                    console.log(correctCodes);
+                }
+
+            } else {
+                document.getElementById("wrongKey").classList.remove("d-none");
+                setTimeout(function () {
+                    document.getElementById("wrongKey").classList.add("d-none");
+                }, 1500);
+            }
+        }
+
+        function checkCorrectCode() {
+            if (document.getElementById("codeInput").value === "8199891") {
+                console.log("yep");
+                document.getElementById("codeCorrect").classList.remove("d-none");
+                document.getElementById("lockerCode").classList.add("d-none");
+                document.getElementById("codeKeyEingabe").classList.add("d-none");
+
+                if (correctCodes == 1) {
+                    schlossDone();
+                } else {
+                    correctCodes += 1;
+                    console.log(correctCodes);
+                }
+            } else {
+                document.getElementById("alertCodeWrong").classList.remove("d-none");
+                setTimeout(function () {
+                    document.getElementById("alertCodeWrong").classList.add("d-none");
+                }, 1500);
+            };
+        }
+
+        function schlossDone() {
+            document.getElementById("codeDayEingabe").classList.remove("d-none");
+            document.getElementById("lockerBefore").classList.add("d-none");
+            document.getElementById("lockerAfter").classList.remove("d-none");
+            document.getElementById("codeDayEingabe").classList.remove("d-none");
+        }
 
         function keyFunction() {
             document.getElementById("lockerAfter").classList.remove("d-none");

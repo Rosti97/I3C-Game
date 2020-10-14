@@ -3,13 +3,6 @@ html, body {
     height: 100%;
   }
 
-  .background {
-    background-image: url("https://images.pexels.com/photos/3769151/pexels-photo-3769151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") ;
-    height: 100%;
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-}
   
 .test {
   color: red;
@@ -22,26 +15,60 @@ html, body {
   padding: 0;
 }
 
-#btn-one {
-  width: 300px;
-  height: 250px;
+.btn-icons {
+  /* width: 30vw;
+   height: 100vh;
+   position: absolute;
+   right: 0%;
+   opacity: 0.1; */
+   
+ color: aliceblue;
+ position: absolute;
+ bottom: 5%;
+ /* left: auto; */
+ 
+}
+
+#btn-patient {
+  width: 64vw;
+  height: 52vh;
   position: absolute;
-  top: 60%;
-  right: 50%;
+  top: 5%;
+  left: 1%;
+  opacity: 0;
 }
 
 #btn-locker {
-  width: 200px;
-  height: 432px;
+  width: 17vw;
+  height: 24vh;
   position: absolute;
-  bottom: 10%;
-  left: 1%;
+  top: 23%;
+  right: 10%;
+  opacity: 0;
 }
 
 #btn-typ {
-  width: 200px;
-  height: 232px;
-  position: absolute;
-  top: 20%;
-  left: 40%;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+}
+
+#btn-light {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+}
+
+#btn-dark {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+}
+
+
+.fas:hover {
+  font-size: 54px;
+  color: beige;
+}
+
+.far:hover {
+  font-size: 54px;
+  color: beige;
 }

@@ -213,7 +213,7 @@
                             <strong>mein Schaaatz!</strong>
                         </div>
                         <div class="keyImg">
-                            <img src="https://images.pexels.com/photos/115642/pexels-photo-115642.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            <img src="/assets/img/HILDMANN_SCHLUSSEL.jpg"
                                 alt="Schlüssel" style="width:100%; max-width: 100%; height: auto;">
                         </div>
                         <div class="lead">Den Schlüssel brauch ich Schwarz auf Weiß!</div>
@@ -235,9 +235,10 @@
                         <div class="lead">
                             Schnell! Ein Notfall im Krankenhaus!
                         </div>
-                        <a href="/pages/finale.html">Zum nächsten Level!</a>
+                        <hr>
+                        <a href="/pages/finale.html">Beeilung!</a>
                     </div>
-                    <div id="footerModalStatue" class="modal-footer">
+                    <div id="footerDonelStatue" class="modal-footer">
                         <button id="doneBtn" type="button" class="btn btn-primary d-none">Aufgenommen und
                             abgepaust!</button>
                         <button id="statueBtn" type="button" class="btn btn-secondary"
@@ -351,7 +352,7 @@
                 document.getElementById("thirdBtn").classList.add("d-none");
                 document.querySelector(".notesNext").classList.remove("d-none");
                 document.getElementById("nextBtn").classList.remove("d-none");
-                setBg('https://images.pexels.com/photos/37079/milan-pegasus-gallery-statue.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+                setBg('/assets/img/HILDMAN_LASER.jpg');
                 document.querySelector(".statueBefore").classList.add("d-none");
                 document.querySelector(".statueAfter").classList.remove("d-none");
                 document.getElementById("doneBtn").classList.remove("d-none");
@@ -375,7 +376,7 @@
         document.getElementById("doneBtn").addEventListener("click", function () {
             document.querySelector(".statueAfter").classList.add("d-none");
             document.querySelector(".nextLevel").classList.remove("d-none");
-            document.getElementById("footerModalStatue").classList.add("d-none");
+            document.getElementById("footerDonelStatue").classList.add("d-none");
         });
 
         function setBg(url) {
@@ -384,7 +385,6 @@
             document.body.style.height = "100%";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundRepeat = "none";
-            console.log("BG changed");
         }
     </script>
 
