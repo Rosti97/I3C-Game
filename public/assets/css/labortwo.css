@@ -22,27 +22,76 @@ html, body {
   padding: 0;
 }
 
-#btn-one {
-  width: 30vw;
-  height: 40vh;
-  position: absolute;
-  top: 60%;
-  left: 0%;
-  opacity: 0.1;
+
+#btn-door {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-color: rgba(0, 0, 0, 0);
 }
 
-#btn-two {
-  width: 30vw;
-  height: 30vh;
-  position: absolute;
-  top: 10%;
-  left: 5%;
-}
-
-#btn-typ {
-    width: 30vw;
+.btn-icons {
+   /* width: 30vw;
     height: 100vh;
     position: absolute;
     right: 0%;
-    opacity: 0.1;
+    opacity: 0.1; */
+    
+  color: aliceblue;
+  position: absolute;
+  bottom: 5%;
+  /* left: auto; */
+  
+}
+
+#btn-typ {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#btn-petri {
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#btn-mikro{
+  width: 23vw;
+  height: 40vh;
+  position: absolute;
+  bottom: 13%;
+  left: 13%;
+  opacity: 0;
+}
+
+#btn-chemie {
+  width: 14vw;
+  height: 27vh;
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  opacity: 0;
+}
+
+#btn-blatt {
+  width: 36vw;
+  height: 40vh;
+  position: absolute;
+  bottom: 15%;
+  right: 22%;
+  opacity: 0;
+}
+
+#btn-deko {
+  width: 13vw;
+  height: 35vh;
+  position: absolute;
+  bottom: 22%;
+  right: 8%;
+  opacity: 0;
+}
+
+.fas:hover {
+  font-size: 54px;
+  color: beige;
 }

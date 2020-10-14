@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="/assets/css/labortwo.css">
     <title>I3C - Team 2</title>
@@ -14,18 +17,36 @@
 <body>
 
     <div class="container-fluid buttons">
-        <div class="btn-one">
-            <button id="btn-one" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#exampleModal">Petrischalen</button>
+        <div class="btn-icons text-center">
+            <button id="btn-petri" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                style='font-size: 48px'><i class="fas fa-info-circle"></i></button>
+            <button id="btn-typ" type="button" class="btn btn-primary" data-toggle="modal" data-target="#blabla"
+                style='font-size: 48px'><i class="fas fa-comment"></i></i></button>
+            <button id="btn-door" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2"
+                style='font-size: 48px'><i class="fas fa-door-closed"></i></button>
         </div>
-        <div class="btn-two">
-            <button id="btn-two" type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#exampleModal2">Tür</button>
-        </div>
-        <div class="btn-typ">
+
+        <!-- <div class="btn-typ">
             <button id="btn-typ" type="button" class="btn btn-primary" data-toggle="modal"
                 data-target="#blabla">Typ</button>
+        </div> -->
+        <div class="btn-typ">
+            <button id="btn-mikro" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#mikro">Mikro</button>
         </div>
+        <div class="btn-typ">
+            <button id="btn-deko" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#deko">Deko</button>
+        </div>
+        <div class="btn-typ">
+            <button id="btn-blatt" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#blatt">Blatt</button>
+        </div>
+        <div class="btn-typ">
+            <button id="btn-chemie" type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#chemie">Chemie</button>
+        </div>
+
         <div class="background">
 
         </div>
@@ -35,7 +56,121 @@
     <!-- <button id="btn-three" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa3">Open
     modal 3</button> -->
 
+    <div class="modal fade" id="mikro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Mikroskop</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">
+                        Ein einfaches Lichtmikroskop.
+                    </p>
+                    <p>Mit bloßem Auge kann man Struturen mit 0.2 mm Größe erkennen, mit einem Lichtmikroskop hingegen
+                        kann man
+                        500 nm kleine Strukturen auflösen.</p>
+                    <p>SARS-CoV-2 ist etwa 100 Nanometer klein und im präparierten Zustand unter einem
+                        Elektronenmikroskop gut zu
+                        erkennen. Mit speziellen Lichtmikroskopen
+                        will man das Virus im lebendigen Zustand genauer beobachten und verstehen.
+                    </p>
+                    <p>Dafür reicht dieses Modell aber nicht.</p>
+                    <hr>
+                    <p class="lead">Für die Petrischalen brauche ich das Mikroskop diesmal nicht.</p>
+                </div>
 
+                <div id="mainModalFooter" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deko" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Reagenzgläser</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">
+                        Leere Reagenzgläser
+                    </p>
+                    <p>
+                        Leider nichts zu entdecken.
+                    </p>
+                </div>
+
+                <div id="mainModalFooter" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blatt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Blatt Papier</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">
+                        Irgendwelche Code-Zeilen. Ich denke nicht, dass das weiterhilft.
+                    </p>
+                    <img src="/assets/img/LAB02-BLATT.jpg" style="width:100%; height: auto; max-width: 100%;">
+                </div>
+
+                <div id="mainModalFooter" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="chemie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Chemische Formel</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">
+                        C2H5OH - oder auch bekannt als Ethanol.
+                    </p>
+                    <img src="/assets/img/LAB02-ETHANOL.jpg" style="width:100%; height: auto; max-width: 100%;">
+                    <p>
+                        In Zeiten der Corona-Pandemie ist es nicht nur wichtig, sich die Hände regelmäßig und richtig zu waschen, sonder sie auch zu desinfizieren.
+                    </p>
+                    <p>
+                        Ein wichtiger Stoff im Desinfektionsmittel ist neben Isopropanol auch Ethanol.
+                    </p>
+                    <p>Aber Desinfektionsmittel ist nicht gleich Desinfektionsmittel. Nicht alle Rezepturen wirken auch gegen SARS-CoV-2.</p>
+                    <p>Da hilft nur, sich die Packung genau anzusehen und die Informationen gründlich durchzulesen.</p>
+                </div>
+
+                <div id="mainModalFooter" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zurück</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -50,16 +185,12 @@
                 <div class="modal-body">
 
                     <div class="lead">
-                        Uns wurde gesagt, dass eine Kontaktperson Hinweise hinterlassen hat. Die Hinweise siehst du am Tisch.
+                        Uns wurde gesagt, dass eine Kontaktperson Hinweise hinterlassen hat. Die Hinweise siehst du am
+                        Tisch.
                     </div>
-                    <!-- <div class="petri">
-                        <img src="https://images.pexels.com/photos/4031435/pexels-photo-4031435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                            alt="Petri" style="width:100%; max-width: 100%; height:auto;">
-                    </div> -->
-
 
                     <div class="dropdown">
-                        <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Hinweis gefällig?
                         </button>
@@ -87,7 +218,7 @@
             <!---->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">Nebenraum Hinweise</h4>
+                    <h4 class="modal-title" id="exampleModalLabel">Nebenraum</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -97,10 +228,14 @@
                     <div class="lead">
                         Dieser Hinweis ist verschlüsselt... Vielleicht hängt es mit den Petrischalen zusammen.
                     </div>
+                    <hr>
+                    <p class="lead">
+                        Wir haben bereits ein Symbol davor analysiert: "West".
+                    </p>
                     <div id="picCake">
                         <img src="/assets/img/LABOR02_NEBENRAUM.jpg" style="width:100%; height: auto; max-width: 100%;">
                         <div class="dropdown">
-                            <button class="btn btn-outline.dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Hinweis gefällig?
                             </button>
@@ -148,6 +283,7 @@
                                 Deutschland.
                             </p>
                             <p>Erst vor ein paar Minuten haben wir den nächsten Hinweis bekommen, er liegt im Nebenraum
+                                <i class="fas fa-door-closed"></i>
                                 aus. Vielleicht haben alle Hinweise miteinander zu tun.
                                 Guck sie dir mal an!
                             </p>
