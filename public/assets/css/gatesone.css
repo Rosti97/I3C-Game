@@ -53,3 +53,12 @@ html, body {
   font-size: 54px;
   color: beige;
 }
+
+.copyright {
+  font-size: 12px;
+  color:grey;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  opacity: 0.4;
+}
