@@ -58,10 +58,10 @@
                 <div class="modal-body">
                     <div class="lead">Ein an Corona erkrankter Patient liegt im Krankenhausraum.</div>
                     <hr>
-                    <p>Der Hauptübertragungsweg des Virus ist über Träpfcheninfektion/Aerosole. Der Patient liegt mit
+                    <p>Der Hauptübertragungsweg des Virus ist über Tröpfcheninfektion/Aerosole. Der Patient liegt mit
                         Husten und Fieber der Station. Schmecken und Riechen funktioniert
                         auch nicht mehr. Alles typische Symptomen von SARS-CoV-2.</p>
-                        <hr>
+                    <hr>
                     <p>Er ist einer der freiwilligen Versuchspersonen unserer Studie, das neue Serum zu testen.
                         Eigentlich sollte der Impfstoff an einem gesunden Menschen getestet werden, aber sein Zustand
                         ist nicht gerade prickelnd, weswegen er zugestimmt hat den Test jetzt durchzuführen.
@@ -125,7 +125,8 @@
                             </button>
                             <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
                                 <p>
-                                    Es braucht Teamwork! Schlüssel und Code sind beide wichtig! Guck dir das Schloss und den dazugehörigen Code genau an!
+                                    Es braucht Teamwork! Schlüssel und Code sind beide wichtig! Guck dir das Schloss und
+                                    den dazugehörigen Code genau an!
                                 </p>
                             </div>
                         </div>
@@ -157,6 +158,17 @@
                         <p>Ihr habt Teamgeist bewiesen und habt dem Patienten das Serum verabreicht.</p>
                         <p>Wir werden den Patienten weiter beobachten und werden sehen, wie sich der Impfstoff auswirkt.
                             Hoffentlich kann er bald für alle verfügbar sein!</p>
+
+                        <hr>
+                        <p class="lead">Nachricht vom Entwicklerteam:</p>
+                        <div class="text-center">
+                            <p><i class="fas fa-heart" style="font-size: 60px;"></i></p>
+                        </div>
+
+                        <p>Danke, dass ihr unser Escape-I3C gespielt habt. Füllt bitte noch folgenden Fragebogen aus:
+                        </p>
+                        <p><a href="https://forms.gle/sMyVbqeRfiWNKewb8" target="_blank">Hier geht's zum Fragebogen</a>
+                        </p>
                     </div>
                 </div>
 
@@ -210,59 +222,7 @@
 
     <!-- <script src="/pages/teamone/gates.js" type="module"></script> -->
 
-    <script>
-        var tryCodes = 0;
-
-        function setBg(url) {
-            document.body.style.backgroundImage = "url(" + url + ")";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.height = "100%";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "none";;
-        }
-
-        setBg('/assets/img/KH2.jpg');
-
-        document.getElementById("btn-light").addEventListener("click", function () {
-            setBg('/assets/img/KH.jpg');
-            document.getElementById("btn-light").classList.add("d-none");
-            document.getElementById("btn-dark").classList.remove("d-none");
-        });
-        document.getElementById("btn-dark").addEventListener("click", function () {
-            setBg('/assets/img/KH2.jpg');
-            document.getElementById("btn-dark").classList.add("d-none");
-            document.getElementById("btn-light").classList.remove("d-none");
-        });
-
-        document.getElementById("codeDayEingabe").addEventListener("click", checkCode);
-        document.getElementById("codeDayInput").addEventListener("keypress", function (e){
-            if(e.key === "Enter") {
-                checkCode();
-            }
-        });
-
-        function checkCode() {
-            if (document.getElementById("codeDayInput").value.toString().toLowerCase() === "sonntag") {
-                document.getElementById("lockerAfter").classList.add("d-none");
-                document.getElementById("lockerBefore").classList.add("d-none");
-                document.getElementById("lockerCorrect").classList.remove("d-none");
-                document.getElementById("codeDayEingabe").classList.add("d-none");
-            } else {
-                if(tryCodes >= 1) {
-                    document.getElementById("hinweis2").classList.remove("d-none");
-                    tryCodes += 1;
-                } if (tryCodes >= 4) {
-                    document.getElementById("hinweis3").classList.remove("d-none");
-                }else {
-                    tryCodes += 1;
-                }
-                document.getElementById("alertWrong").classList.remove("d-none");
-                setTimeout(function () {
-                    document.getElementById("alertWrong").classList.add("d-none");
-                }, 2000);
-            }
-        };
-        
+    <script src="/js/finale.js">
     </script>
 
 </body>
